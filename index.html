@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/default.css" type="text/css"/>
+    <title>PHUSA</title>
+  </head>
+  <body class="bg">
+
+  <!--Country summary panel-->
+    <div class="card text-light h-100 w-25 fixed-top animate__animated animate__slideInRight">
+      <img class="card-img-top" src="https://i.ibb.co/8KvrNhV/ph.png" alt="Card image cap">
+      <div class="card-body bg-dark">
+        <h5 class="card-title country-name"><b>Bansa:</b> Loading...</h5>
+          <p class="card-text total-cases"><b>Kabuuang Kaso:</b> Loading...</p>
+          <p class="card-text total-deaths"><b>Kabuuang Namamatay:</b> Loading...</p>
+          <p class="card-text total-recovered"><b>Kabuuang Nakarekober:</b> Loading...</p>
+          <p class="card-text last-update"><b>Huling pag-update:</b> Loading...</p>
+
+      <div class="btn-group" role="group" aria-label="card buttons">
+          <button type="button" class="btn btn-info tooltips" data-toggle="modal" data-target="#statisticsModal" ><i class="fa fa-chart-line"><span class="tooltiptext">Statistics</span></i></button>
+          <button type="button" class="btn btn-primary tooltips referesh-btn" ><i class="fas fa-sync-alt"><span class="tooltiptext">Refresh</span></i></button>
+          <div class="dropdown">
+              <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pumili ng bansa
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button">PH</button>
+                <button class="dropdown-item disabled" type="button">USA (Feature unavailable)</button>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Statistics Modal -->
+  <div class="modal fade" id="statisticsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="exampleModalLongTitle">Mga Istatistika</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark">
+            <canvas id="myChart" width="600" height="300"><p>Your browser doesn't support this feature.</p></canvas>
+          <!--
+            Present Covid19 statistical data using chartJS
+            <img src="https://s3.amazonaws.com/assets.fullstack.io/n/20200309095518221_react-chartjs.png" width="460"/>
+          -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning">Tom's Software &#8482;</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Isara</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Table for cases, deaths, and recovered cases-->
+
+    <table class="table table-sm table-hover table-dark">
+      <thead class="thead-dark ">
+        <tr>
+          <th scope="col">Mga Araw</th>
+          <th scope="col" class="text-warning">Kaso</th>
+          <th scope="col" class="text-danger">Namatay</th>
+          <th scope="col" class="text-success">Nakarekober</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--data goes here, boui-->
+      </tbody>
+    </table>
+    
+    <script src="/script/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
